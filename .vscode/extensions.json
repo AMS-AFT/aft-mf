@@ -1,3 +1,11 @@
 {
-  "recommendations": ["nrwl.angular-console", "esbenp.prettier-vscode"]
+  "recommendations": [
+    "nrwl.angular-console",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "sonarsource.sonarlint-vscode",
+    "kisstkondoros.vscode-codemetrics",
+    "firsttris.vscode-jest-runner",
+    "Orta.vscode-jest"
+  ]
 }
