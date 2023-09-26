@@ -44,6 +44,7 @@
     "lint-staged": "^14.0.1",
     "nx": "16.9.1",
     "nx-cloud": "16.4.0",
+    "only-allow": "^1.2.0",
     "prettier": "^3.0.3",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
