@@ -2,13 +2,15 @@
   "name": "@aft-mf/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "update:nx": "nx migrate latest && pnpm install && (test -f migrations.json && (nx migrate --run-migrations && rm migrations.json) || 2>/dev/null)"
+  },
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "@nx/js": "16.9.0",
-    "@nx/workspace": "16.9.0",
-    "nx": "16.9.0",
-    "nx-cloud": "latest"
+    "@nx/js": "16.9.1",
+    "@nx/workspace": "16.9.1",
+    "nx": "16.9.1",
+    "nx-cloud": "16.4.0"
   }
 }
