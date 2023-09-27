@@ -5,14 +5,32 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/esbuild:esbuild",
+      "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/common",
         "main": "packages/common/src/index.ts",
+        "outputPath": "dist/common",
         "tsConfig": "packages/common/tsconfig.lib.json",
-        "assets": ["packages/common/*.md"],
-        "format": ["esm"]
+        "compiler": "tsc",
+        "project": "packages/common/package.json",
+        "format": ["cjs", "esm"],
+        "assets": [
+          {
+            "glob": "packages/common/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
       }
     },
     "publish": {

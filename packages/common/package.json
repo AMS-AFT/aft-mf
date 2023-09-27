@@ -1,6 +1,6 @@
 {
   "name": "@aft-mf/common",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Implements fundamental AFT Meta Framework functionality",
   "keywords": [
     "aft-mf",
@@ -19,8 +19,5 @@
   },
   "license": "MIT",
   "sideEffects": false,
-  "private": true,
-  "type": "module",
-  "module": "./index.js",
-  "main": "./index.js"
+  "private": false
 }
