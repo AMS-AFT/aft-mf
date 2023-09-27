@@ -34,7 +34,7 @@
       }
     },
     "publish": {
-      "command": "node tools/scripts/publish.mjs common",
+      "command": "pnpm publish dist/common --access public --registry http://localhost:4873/ --no-git-checks",
       "dependsOn": ["build"]
     },
     "lint": {
