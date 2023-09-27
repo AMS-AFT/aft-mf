@@ -10,6 +10,9 @@ overrides:
 importers:
   .:
     dependencies:
+      ts-essentials:
+        specifier: ^9.4.0
+        version: 9.4.0(typescript@5.1.6)
       tslib:
         specifier: ^2.3.0
         version: 2.6.2
@@ -8944,6 +8947,18 @@ packages:
     engines: { node: '>=8' }
     dev: true
 
+  /ts-essentials@9.4.0(typescript@5.1.6):
+    resolution:
+      { integrity: sha512-s4BzWZmTh926caZO7XF7MMbwCn1BioT3s3r9hT8ARnwW//30OD0XioEsMyq3ORAHP/deN4Zkst2ZvxXmL+tG6g== }
+    peerDependencies:
+      typescript: '>=4.1.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      typescript: 5.1.6
+    dev: false
+
   /ts-jest@29.1.1(@babel/core@7.23.0)(esbuild@0.17.19)(jest@29.7.0)(typescript@5.1.6):
     resolution:
       { integrity: sha512-D6xjnnbP17cC85nliwGiL+tpoKN0StpgE0TeOjXQTU6MVCfsB4v7aW05CgQ/1OywGb0x/oy9hHFnN+sczTiRaA== }
@@ -9161,7 +9176,6 @@ packages:
       { integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA== }
     engines: { node: '>=14.17' }
     hasBin: true
-    dev: true
 
   /uglify-js@3.17.4:
     resolution:
