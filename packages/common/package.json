@@ -19,7 +19,7 @@
   },
   "license": "MIT",
   "sideEffects": false,
-  "private": false,
+  "private": true,
   "type": "module",
   "module": "./index.js",
   "main": "./index.js"
