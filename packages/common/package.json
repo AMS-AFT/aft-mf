@@ -1,7 +1,26 @@
 {
   "name": "@aft-mf/common",
   "version": "0.0.1",
-  "dependencies": {},
-  "type": "commonjs",
-  "main": "./index.cjs"
+  "description": "Implements fundamental AFT Meta Framework functionality",
+  "keywords": [
+    "aft-mf",
+    "common",
+    "JavaScript",
+    "TypeScript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AMS-AFT/aft-mf.git",
+    "directory": "packages/common"
+  },
+  "homepage": "https://github.com/AMS-AFT/aft-mf/tree/main/packages/common",
+  "bugs": {
+    "url": "https://github.com/AMS-AFT/aft-mf/labels/lib-common"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "private": false,
+  "type": "module",
+  "module": "./index.js",
+  "main": "./index.js"
 }
