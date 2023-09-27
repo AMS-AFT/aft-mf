@@ -21,7 +21,11 @@
         "@nx/dependency-checks": [
           "error",
           {
-            "ignoredFiles": ["{projectRoot}/esbuild.config.{js,ts,mjs,mts}"]
+            "includeTransitiveDependencies": true,
+            "ignoredFiles": ["{projectRoot}/esbuild.config.{js,ts,mjs,mts}"],
+            "checkMissingDependencies": true,
+            "checkObsoleteDependencies": true,
+            "checkVersionMismatches": true
           }
         ]
       }
