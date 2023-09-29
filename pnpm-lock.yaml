@@ -24,10 +24,10 @@ importers:
         specifier: ^17.7.1
         version: 17.7.1(commitizen@4.3.0)(inquirer@8.2.6)
       '@nx/devkit':
-        specifier: ^16.9.1
+        specifier: 16.9.1
         version: 16.9.1(nx@16.9.1)
       '@nx/eslint-plugin':
-        specifier: ^16.9.1
+        specifier: 16.9.1
         version: 16.9.1(@types/node@18.7.1)(@typescript-eslint/parser@5.62.0)(eslint-config-prettier@8.1.0)(eslint@8.46.0)(nx@16.9.1)(typescript@5.1.6)(verdaccio@5.26.3)
       '@nx/jest':
         specifier: 16.9.1
@@ -36,7 +36,7 @@ importers:
         specifier: 16.9.1
         version: 16.9.1(@types/node@18.7.1)(nx@16.9.1)(typescript@5.1.6)(verdaccio@5.26.3)
       '@nx/linter':
-        specifier: ^16.9.1
+        specifier: 16.9.1
         version: 16.9.1(@types/node@18.7.1)(eslint@8.46.0)(nx@16.9.1)(verdaccio@5.26.3)
       '@nx/rollup':
         specifier: 16.9.1
@@ -75,8 +75,8 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0(eslint@8.46.0)
       eslint-plugin-unused-imports:
-        specifier: ^3.0.0
-        version: 3.0.0(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.46.0)
+        specifier: ^2.0.0
+        version: 2.0.0(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.46.0)
       husky:
         specifier: ^8.0.3
         version: 8.0.3
@@ -5036,12 +5036,12 @@ packages:
       eslint: 8.46.0
     dev: true
 
-  /eslint-plugin-unused-imports@3.0.0(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.46.0):
+  /eslint-plugin-unused-imports@2.0.0(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.46.0):
     resolution:
-      { integrity: sha512-sduiswLJfZHeeBJ+MQaG+xYzSWdRXoSw61DpU13mzWumCkR0ufD0HmO4kdNokjrkluMHpj/7PJeN35pgbhW3kw== }
+      { integrity: sha512-3APeS/tQlTrFa167ThtP0Zm0vctjr4M44HMpeg1P4bK6wItarumq0Ma82xorMKdFsWpphQBlRPzw/pxiVELX1A== }
     engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
     peerDependencies:
-      '@typescript-eslint/eslint-plugin': ^6.0.0
+      '@typescript-eslint/eslint-plugin': ^5.0.0
       eslint: ^8.0.0
     peerDependenciesMeta:
       '@typescript-eslint/eslint-plugin':
@@ -7822,7 +7822,7 @@ packages:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.13.0
-      semver: 7.5.3
+      semver: 7.5.4
       validate-npm-package-license: 3.0.4
     dev: true
 
