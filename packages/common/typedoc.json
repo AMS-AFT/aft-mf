@@ -1,0 +1,11 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "extends": ["../../typedoc.base.json"],
+
+  "name": "AFT Meta Framework Common",
+  "out": "../../docs/packages/common",
+  "json": "../../docs/packages/common/documentation.json",
+  "entryPoints": ["./src/index.ts"],
+  "tsconfig": "./tsconfig.lib.json",
+  "basePath": "./src/lib"
+}

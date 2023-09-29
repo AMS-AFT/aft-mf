@@ -1,0 +1,14 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+
+  "plugin": ["typedoc-plugin-mdn-links"],
+
+  "exclude": ["**/*+(index|.spec|.e2e).ts"],
+  "excludeInternal": true,
+  "excludePrivate": true,
+  "includeVersion": true,
+  "pretty": true,
+  "cacheBust": true,
+  "categorizeByGroup": true,
+  "validation": true
+}
