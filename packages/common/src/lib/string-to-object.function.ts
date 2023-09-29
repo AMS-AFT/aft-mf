@@ -1,5 +1,6 @@
 /**
  * The `stringToObject` configuration object.
+ * @publicApi
  */
 export interface StringToObjectConfig {
   /**
