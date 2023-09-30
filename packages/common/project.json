@@ -64,6 +64,24 @@
         "commands": ["npx typedoc --options packages/common/typedoc.json", "nx run common:test:ci"],
         "parallel": false
       }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "skipCommitTypes": ["docs", "ci", "chore", "build", "style", "test"],
+        "commitMessageFormat": "chore(${projectName}): release version ${version}",
+        "tagPrefix": "${projectName}-v",
+        "noVerify": true,
+        "push": true,
+        "postTargets": ["common:github"]
+      }
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
     }
   },
   "tags": ["type:library", "scope: none", "framework:none"]
