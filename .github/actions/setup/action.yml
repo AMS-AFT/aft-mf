@@ -1,0 +1,59 @@
+name: Setup
+description: Setup node.js and install dependencies
+
+inputs:
+  node_version:
+    description: node.js version
+    required: false
+    default: '16'
+  registry-url:
+    description: Registry URL
+    required: false
+    default: https://registry.npmjs.org
+
+runs:
+  using: composite
+  steps:
+    - name: Checkout all commits from main
+      uses: actions/checkout@v3
+      with:
+        token: ${{ env.GITHUB_TOKEN }}
+        fetch-depth: 0
+
+    - name: Derive appropriate SHAs for base and head for `nx affected` commands
+      uses: nrwl/nx-set-shas@v3
+
+    - name: Setup Git User
+      shell: bash
+      run: |
+        git config user.name "🤖 AFT-MF Bot"
+        git config user.email "-"
+
+    - name: Setup node.js ${{ inputs.node_version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ inputs.node_version }}
+        registry-url: ${{ inputs.registry-url }}
+
+    - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+    
+    - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+    
+    - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+    - name: Install Dependencies
+      shell: bash
+      run: pnpm install
