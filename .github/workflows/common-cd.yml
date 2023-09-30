@@ -1,4 +1,4 @@
-name: AFT Meta Framework Common Continuous Deployment
+name: AFT-MF Common CD
 
 on:
   push:

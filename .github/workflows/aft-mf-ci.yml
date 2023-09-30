@@ -1,4 +1,4 @@
-name: AFT Meta Framework Continuous Integration
+name: AFT-MF CI
 
 on:
   workflow_dispatch:
