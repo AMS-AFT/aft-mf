@@ -62,4 +62,4 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Version Affected
-        run: pnpm exec affected --target=version --parallel=1
+        run: pnpm exec nx affected --target=version --parallel=1
