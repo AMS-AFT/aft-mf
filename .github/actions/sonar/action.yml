@@ -29,7 +29,7 @@ runs:
 
     - name: Modify eslint.json
       shell: bash
-      run: sed -i 's#/home/runner/work/aft-mf/common#/github/workspace#g' packages/${{ env.PROJECT_NAME }}/eslint.json
+      run: sed -i 's#/home/runner/work/aft-mf/aft-mf#/github/workspace#g' packages/${{ env.PROJECT_NAME }}/eslint.json
 
     - name: Analyze in SonarCloud
       uses: SonarSource/sonarcloud-github-action@master
