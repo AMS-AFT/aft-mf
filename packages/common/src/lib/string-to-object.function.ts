@@ -1,54 +1,58 @@
 /**
- * The `stringToObject` configuration object.
+ * Configuration object to define the strings used to separate properties and the keys from their value.
+ * @see {@link stringToObject}
  * @publicApi
  */
-export interface StringToObjectConfig {
+export interface StringToObjectSeparators {
   /**
    * The string used to separate properties.
    *
    * Defaults to `','`.
    */
-  prop: string;
+  properties: string;
 
   /**
-   * The string used to separate the key from the value.
+   * The string used to separate the keys from their value.
    *
    * Defaults to `'='`.
    */
-  val: string;
+  values: string;
 }
 
 /**
  * Converts a key value pairs string to object.
- * @param value The key value pairs string to convert.
- * @param config The configuration object. Defaults to `{ prop: ',', val: '=' }`.
- * @returns The key value pairs string as object or empty object if invalid config.
+ * @param keyValueStr The key value pairs string to convert.
+ * @param separators Configuration object to define the strings used to separate properties and the keys from their
+ * value. Defaults to `{ properties: ',', values: '=' }`.
+ * @returns The key value pairs string as object or empty object if invalid separators.
  * @publicApi
  * @example
  * ```ts
+ * const separators = { properties: ';', values: ':' };
+ * stringToObject(''); // {}
  * stringToObject('a=0, b=0'); // { a:'0', b:'0' }
  * stringToObject('a:0; b:0'); // {}
- * stringToObject('a:0; b:0', { prop: ';', val: ':' }); // { a:'0', b:'0' }
+ * stringToObject('a:0; b:0', separators); // { a:'0', b:'0' }
  * stringToObject('a=0 , , , b=0'); // { a:'0', b:'0' }
  * stringToObject('a=0, b=0 = 0'); // { a:'0', b:'0 = 0' }
  * stringToObject('a=0, b:0'); // { a:'0' }
  * ```
  */
 export function stringToObject(
-  value: string,
-  config: StringToObjectConfig = { prop: ',', val: '=' }
+  keyValueStr: string,
+  separators: StringToObjectSeparators = { properties: ',', values: '=' }
 ): Record<string, string> {
-  const props: string[] = value
-    .split(config.prop)
+  const props: string[] = keyValueStr
+    .split(separators.properties)
     .map((property: string): string => property.trim())
     .filter((value: string): boolean => value.length > 0);
 
   return props.reduce((obj: Record<string, string>, prop: string) => {
-    const kv = prop.split(config.val);
+    const kv = prop.split(separators.values);
     const key = kv.shift() as string;
 
     if (kv.length > 0) {
-      obj[key.trim()] = kv.join(config.val).trim();
+      obj[key.trim()] = kv.join(separators.values).trim();
     }
 
     return obj;

@@ -1,7 +1,7 @@
 import { stringToObject } from './string-to-object.function';
 
 describe('stringToObject', () => {
-  const config = { prop: ';', val: ':' };
+  const config = { properties: ';', values: ':' };
   const obj = { a: '0', b: '0' };
 
   it(`returns the string as object`, () => {
@@ -12,6 +12,11 @@ describe('stringToObject', () => {
   it(`returns empty object if invalid separators`, () => {
     const value = 'a:0;b:0';
     expect(stringToObject(value)).toEqual({});
+  });
+
+  it(`returns empty object if empty string`, () => {
+    expect(stringToObject('')).toEqual({});
+    expect(stringToObject('   ')).toEqual({});
   });
 
   it(`returns the string as object with custom config`, () => {
