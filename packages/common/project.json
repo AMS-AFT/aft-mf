@@ -5,19 +5,36 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/esbuild:esbuild",
+      "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/packages/common",
         "main": "packages/common/src/index.ts",
+        "outputPath": "dist/common",
         "tsConfig": "packages/common/tsconfig.lib.json",
-        "assets": ["packages/common/*.md"],
-        "generatePackageJson": true,
-        "format": ["cjs"]
+        "compiler": "tsc",
+        "project": "packages/common/package.json",
+        "format": ["cjs", "esm"],
+        "assets": [
+          {
+            "glob": "packages/common/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
       }
     },
     "publish": {
-      "command": "node tools/scripts/publish.mjs common {args.ver} {args.tag}",
+      "command": "pnpm publish dist/common --access public --registry http://localhost:4873/ --no-git-checks",
       "dependsOn": ["build"]
     },
     "lint": {
@@ -29,7 +46,7 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": ["{workspaceRoot}/docs/{projectRoot}/coverage"],
       "options": {
         "jestConfig": "packages/common/jest.config.ts",
         "passWithNoTests": true
@@ -39,6 +56,13 @@
           "ci": true,
           "codeCoverage": true
         }
+      }
+    },
+    "docs": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npx typedoc --options packages/common/typedoc.json", "nx run common:test:ci"],
+        "parallel": false
       }
     }
   },
