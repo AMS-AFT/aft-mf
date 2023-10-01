@@ -34,7 +34,7 @@ jobs:
           node_version: ${{ matrix.node_version }}
 
       - name: Test Affected
-        run: pnpm exec nx affected --target=test
+        run: pnpm exec nx affected --target=test --no-cloud
 
   build-lint:
     runs-on: ubuntu-latest
@@ -46,10 +46,10 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Lint Affected
-        run: pnpm exec nx affected --target=lint
+        run: pnpm exec nx affected --target=lint --no-cloud
 
       - name: Build Affected
-        run: pnpm exec nx affected --target=build
+        run: pnpm exec nx affected --target=build --no-cloud
 
   version:
     needs: [test, build-lint]
@@ -62,4 +62,4 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Version Affected
-        run: pnpm exec nx affected --target=version --parallel=1
+        run: pnpm exec nx affected --target=version --parallel=1 --no-cloud

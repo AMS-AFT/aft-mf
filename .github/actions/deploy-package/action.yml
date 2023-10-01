@@ -11,7 +11,7 @@ runs:
 
     - name: Build
       shell: bash
-      run: pnpm exec nx run ${{ env.PROJECT_NAME }}:build
+      run: pnpm exec nx run ${{ env.PROJECT_NAME }}:build --no-cloud
 
     - name: Deploy in npm.js
       shell: bash
