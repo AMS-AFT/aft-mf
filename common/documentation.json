@@ -1,0 +1,1222 @@
+{
+	"id": 0,
+	"name": "AFT Meta Framework Common",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 15,
+			"name": "StringToObjectSeparators",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Configuration object to define the strings used to separate properties and the keys from their value."
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@see",
+						"content": [
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "stringToObject",
+								"target": 11,
+								"tsLinkText": ""
+							}
+						]
+					},
+					{
+						"tag": "@publicApi",
+						"content": []
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 16,
+					"name": "properties",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The string used to separate properties.\n\nDefaults to "
+							},
+							{
+								"kind": "code",
+								"text": "`','`"
+							},
+							{
+								"kind": "text",
+								"text": "."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "string-to-object.function.ts",
+							"line": 12,
+							"character": 2,
+							"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/string-to-object.function.ts#L12"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 17,
+					"name": "values",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The string used to separate the keys from their value.\n\nDefaults to "
+							},
+							{
+								"kind": "code",
+								"text": "`'='`"
+							},
+							{
+								"kind": "text",
+								"text": "."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "string-to-object.function.ts",
+							"line": 19,
+							"character": 2,
+							"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/string-to-object.function.ts#L19"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						16,
+						17
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "string-to-object.function.ts",
+					"line": 6,
+					"character": 17,
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/string-to-object.function.ts#L6"
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "AnyFunction",
+			"variant": "declaration",
+			"kind": 4194304,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "any-function.type.ts",
+					"line": 11,
+					"character": 12,
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/any-function.type.ts#L11"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 5,
+					"name": "T",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The return type."
+							}
+						]
+					}
+				},
+				{
+					"id": 6,
+					"name": "Args",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The arguments type. Defaults to "
+							},
+							{
+								"kind": "code",
+								"text": "`any`"
+							},
+							{
+								"kind": "text",
+								"text": "."
+							}
+						]
+					},
+					"default": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 2,
+					"name": "__type",
+					"variant": "declaration",
+					"kind": 65536,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "any-function.type.ts",
+							"line": 11,
+							"character": 41,
+							"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/any-function.type.ts#L11"
+						}
+					],
+					"signatures": [
+						{
+							"id": 3,
+							"name": "__type",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Matches a function that returns a value."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The result of executing the function with the args."
+											}
+										]
+									},
+									{
+										"tag": "@publicApi",
+										"content": []
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 4,
+									"name": "args",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isRest": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The arguments needed to resolve the function."
+											}
+										]
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"target": -1,
+											"name": "Args",
+											"refersToTypeParameter": true
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": -1,
+								"name": "T",
+								"refersToTypeParameter": true
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 28,
+			"name": "ValueOrFn",
+			"variant": "declaration",
+			"kind": 4194304,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Matches a value or a function that returns the value."
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@publicApi",
+						"content": []
+					}
+				]
+			},
+			"sources": [
+				{
+					"fileName": "value-or-fn.type.ts",
+					"line": 10,
+					"character": 12,
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/value-or-fn.type.ts#L10"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 29,
+					"name": "T",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The value type."
+							}
+						]
+					}
+				},
+				{
+					"id": 30,
+					"name": "Args",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The arguments type. Defaults to "
+							},
+							{
+								"kind": "code",
+								"text": "`any`"
+							},
+							{
+								"kind": "text",
+								"text": "."
+							}
+						]
+					},
+					"default": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				}
+			],
+			"type": {
+				"type": "union",
+				"types": [
+					{
+						"type": "reference",
+						"target": -1,
+						"name": "T",
+						"refersToTypeParameter": true
+					},
+					{
+						"type": "reference",
+						"target": 1,
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": -1,
+								"name": "T",
+								"refersToTypeParameter": true
+							},
+							{
+								"type": "reference",
+								"target": -1,
+								"name": "Args",
+								"refersToTypeParameter": true
+							}
+						],
+						"name": "AnyFunction",
+						"package": "@aft-mf/common"
+					}
+				]
+			}
+		},
+		{
+			"id": 21,
+			"name": "DAY_AS_MILLISECOND",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Number of milliseconds in a day: 86_400_000."
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@publicApi",
+						"content": []
+					}
+				]
+			},
+			"sources": [
+				{
+					"fileName": "time-conversion.constant.ts",
+					"line": 23,
+					"character": 13,
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/time-conversion.constant.ts#L23"
+				}
+			],
+			"type": {
+				"type": "intrinsic",
+				"name": "number"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 20,
+			"name": "HOUR_AS_MILLISECOND",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Number of milliseconds in an hour: 3_600_000."
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@publicApi",
+						"content": []
+					}
+				]
+			},
+			"sources": [
+				{
+					"fileName": "time-conversion.constant.ts",
+					"line": 17,
+					"character": 13,
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/time-conversion.constant.ts#L17"
+				}
+			],
+			"type": {
+				"type": "intrinsic",
+				"name": "number"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 19,
+			"name": "MINUTE_AS_MILLISECOND",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Number of milliseconds in a minute: 60_000."
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@publicApi",
+						"content": []
+					}
+				]
+			},
+			"sources": [
+				{
+					"fileName": "time-conversion.constant.ts",
+					"line": 11,
+					"character": 13,
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/time-conversion.constant.ts#L11"
+				}
+			],
+			"type": {
+				"type": "intrinsic",
+				"name": "number"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 18,
+			"name": "SECOND_AS_MILLISECOND",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Number of milliseconds in a second: 1_000."
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@publicApi",
+						"content": []
+					}
+				]
+			},
+			"sources": [
+				{
+					"fileName": "time-conversion.constant.ts",
+					"line": 5,
+					"character": 13,
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/time-conversion.constant.ts#L5"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": 1000
+			},
+			"defaultValue": "1_000"
+		},
+		{
+			"id": 7,
+			"name": "randomBetween",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "random-between.function.ts",
+					"line": 27,
+					"character": 16,
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/random-between.function.ts#L27"
+				}
+			],
+			"signatures": [
+				{
+					"id": 8,
+					"name": "randomBetween",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Gets a random integer between two values, both included.\n\nWill swap values if "
+							},
+							{
+								"kind": "code",
+								"text": "`min`"
+							},
+							{
+								"kind": "text",
+								"text": " is bigger than "
+							},
+							{
+								"kind": "code",
+								"text": "`max`"
+							},
+							{
+								"kind": "text",
+								"text": ".\nThe lower value will be rounded down if it's decimal, with a minimum of "
+							},
+							{
+								"kind": "code",
+								"text": "`MIN_SAFE_INTEGER`"
+							},
+							{
+								"kind": "text",
+								"text": ".\nThe bigger value will be rounded up if it's decimal, with a maximum of "
+							},
+							{
+								"kind": "code",
+								"text": "`MAX_SAFE_INTEGER`"
+							},
+							{
+								"kind": "text",
+								"text": "."
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@returns",
+								"content": [
+									{
+										"kind": "text",
+										"text": "A random integer between the two values."
+									}
+								]
+							},
+							{
+								"tag": "@throws",
+								"content": [
+									{
+										"kind": "code",
+										"text": "`TypeError`"
+									},
+									{
+										"kind": "text",
+										"text": " if any value is "
+									},
+									{
+										"kind": "code",
+										"text": "`NaN`"
+									},
+									{
+										"kind": "text",
+										"text": "."
+									}
+								]
+							},
+							{
+								"tag": "@see",
+								"content": [
+									{
+										"kind": "text",
+										"text": " - "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "MIN_SAFE_INTEGER",
+										"target": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER"
+									},
+									{
+										"kind": "text",
+										"text": "\n"
+									},
+									{
+										"kind": "text",
+										"text": " - "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "MAX_SAFE_INTEGER",
+										"target": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER"
+									},
+									{
+										"kind": "text",
+										"text": "\n"
+									},
+									{
+										"kind": "text",
+										"text": " - "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "TypeError",
+										"target": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError"
+									},
+									{
+										"kind": "text",
+										"text": "\n"
+									},
+									{
+										"kind": "text",
+										"text": " - "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "NaN",
+										"target": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"
+									},
+									{
+										"kind": "text",
+										"text": "\n"
+									}
+								]
+							},
+							{
+								"tag": "@publicApi",
+								"content": []
+							},
+							{
+								"tag": "@example",
+								"content": [
+									{
+										"kind": "code",
+										"text": "```ts\nrandomBetween(200, 300); // 242\nrandomBetween(300, 200); // 231\nrandomBetween(200.1, 299.1);\n// random from 200 to 300, both included\nrandomBetween(NEGATIVE_INFINITY, POSITIVE_INFINITY);\n// random from MIN_SAFE_INTEGER to MAX_SAFE_INTEGER, both included\nrandomBetween(NaN, 300); // throws TypeError\n```"
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "random-between.function.ts",
+							"line": 27,
+							"character": 0,
+							"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/random-between.function.ts#L27"
+						}
+					],
+					"parameters": [
+						{
+							"id": 9,
+							"name": "min",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The minimum value."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 10,
+							"name": "max",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The maximum value."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				}
+			]
+		},
+		{
+			"id": 11,
+			"name": "stringToObject",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "string-to-object.function.ts",
+					"line": 41,
+					"character": 16,
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/string-to-object.function.ts#L41"
+				}
+			],
+			"signatures": [
+				{
+					"id": 12,
+					"name": "stringToObject",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Converts a key value pairs string to object."
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@returns",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The key value pairs string as object or empty object if invalid separators."
+									}
+								]
+							},
+							{
+								"tag": "@publicApi",
+								"content": []
+							},
+							{
+								"tag": "@example",
+								"content": [
+									{
+										"kind": "code",
+										"text": "```ts\nconst separators = { properties: ';', values: ':' };\nstringToObject(''); // {}\nstringToObject('a=0, b=0'); // { a:'0', b:'0' }\nstringToObject('a:0; b:0'); // {}\nstringToObject('a:0; b:0', separators); // { a:'0', b:'0' }\nstringToObject('a=0 , , , b=0'); // { a:'0', b:'0' }\nstringToObject('a=0, b=0 = 0'); // { a:'0', b:'0 = 0' }\nstringToObject('a=0, b:0'); // { a:'0' }\n```"
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "string-to-object.function.ts",
+							"line": 41,
+							"character": 0,
+							"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/string-to-object.function.ts#L41"
+						}
+					],
+					"parameters": [
+						{
+							"id": 13,
+							"name": "keyValueStr",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The key value pairs string to convert."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 14,
+							"name": "separators",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Configuration object to define the strings used to separate properties and the keys from their\nvalue. Defaults to "
+									},
+									{
+										"kind": "code",
+										"text": "`{ properties: ',', values: '=' }`"
+									},
+									{
+										"kind": "text",
+										"text": "."
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"target": 15,
+								"name": "StringToObjectSeparators",
+								"package": "@aft-mf/common"
+							},
+							"defaultValue": "..."
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "node_modules/.pnpm/typescript@5.1.6/node_modules/typescript/lib/lib.es5.d.ts",
+							"qualifiedName": "Record"
+						},
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "intrinsic",
+								"name": "string"
+							}
+						],
+						"name": "Record",
+						"package": "typescript",
+						"externalUrl": "https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type"
+					}
+				}
+			]
+		},
+		{
+			"id": 22,
+			"name": "valueOrFn",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "value-or-fn.function.ts",
+					"line": 21,
+					"character": 16,
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/value-or-fn.function.ts#L21"
+				}
+			],
+			"signatures": [
+				{
+					"id": 23,
+					"name": "valueOrFn",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Solves for a value that can be a value or a function that returns the value."
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@returns",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The value or the result of executing the function with the args."
+									}
+								]
+							},
+							{
+								"tag": "@publicApi",
+								"content": []
+							},
+							{
+								"tag": "@example",
+								"content": [
+									{
+										"kind": "code",
+										"text": "```ts\nvalueOrFn(null); // null\nvalueOrFn(undefined); // undefined\nvalueOrFn(1); // 1\nvalueOrFn(() => 1); // 1\nvalueOrFn((a, b) => a + b, 1, 1); // 2\n```"
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "value-or-fn.function.ts",
+							"line": 21,
+							"character": 0,
+							"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/value-or-fn.function.ts#L21"
+						}
+					],
+					"typeParameter": [
+						{
+							"id": 24,
+							"name": "T",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The value type."
+									}
+								]
+							}
+						},
+						{
+							"id": 25,
+							"name": "Args",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The arguments type. Defaults to "
+									},
+									{
+										"kind": "code",
+										"text": "`any`"
+									},
+									{
+										"kind": "text",
+										"text": "."
+									}
+								]
+							},
+							"default": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"parameters": [
+						{
+							"id": 26,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The value or function to solve."
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"target": 28,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": -1,
+										"name": "T",
+										"refersToTypeParameter": true
+									},
+									{
+										"type": "reference",
+										"target": -1,
+										"name": "Args",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "ValueOrFn",
+								"package": "@aft-mf/common"
+							}
+						},
+						{
+							"id": 27,
+							"name": "args",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {
+								"isRest": true
+							},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The arguments needed to resolve the function."
+									}
+								]
+							},
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"target": -1,
+									"name": "Args",
+									"refersToTypeParameter": true
+								}
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": -1,
+						"name": "T",
+						"refersToTypeParameter": true
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Interfaces",
+			"children": [
+				15
+			]
+		},
+		{
+			"title": "Type Aliases",
+			"children": [
+				1,
+				28
+			]
+		},
+		{
+			"title": "Variables",
+			"children": [
+				21,
+				20,
+				19,
+				18
+			]
+		},
+		{
+			"title": "Functions",
+			"children": [
+				7,
+				11,
+				22
+			]
+		}
+	],
+	"packageName": "@aft-mf/common",
+	"packageVersion": "0.0.1",
+	"readme": [
+		{
+			"kind": "text",
+			"text": "# AFT Meta Framework Common\n\nImplements fundamental AFT Meta Framework functionality."
+		}
+	],
+	"symbolIdMap": {
+		"0": {
+			"sourceFileName": "packages/common/src/index.ts",
+			"qualifiedName": ""
+		},
+		"1": {
+			"sourceFileName": "packages/common/src/lib/any-function.type.ts",
+			"qualifiedName": "AnyFunction"
+		},
+		"2": {
+			"sourceFileName": "packages/common/src/lib/any-function.type.ts",
+			"qualifiedName": "__type"
+		},
+		"3": {
+			"sourceFileName": "packages/common/src/lib/any-function.type.ts",
+			"qualifiedName": "__type"
+		},
+		"4": {
+			"sourceFileName": "packages/common/src/lib/any-function.type.ts",
+			"qualifiedName": "args"
+		},
+		"5": {
+			"sourceFileName": "packages/common/src/lib/any-function.type.ts",
+			"qualifiedName": "T"
+		},
+		"6": {
+			"sourceFileName": "packages/common/src/lib/any-function.type.ts",
+			"qualifiedName": "Args"
+		},
+		"7": {
+			"sourceFileName": "packages/common/src/lib/random-between.function.ts",
+			"qualifiedName": "randomBetween"
+		},
+		"8": {
+			"sourceFileName": "packages/common/src/lib/random-between.function.ts",
+			"qualifiedName": "randomBetween"
+		},
+		"9": {
+			"sourceFileName": "packages/common/src/lib/random-between.function.ts",
+			"qualifiedName": "min"
+		},
+		"10": {
+			"sourceFileName": "packages/common/src/lib/random-between.function.ts",
+			"qualifiedName": "max"
+		},
+		"11": {
+			"sourceFileName": "packages/common/src/lib/string-to-object.function.ts",
+			"qualifiedName": "stringToObject"
+		},
+		"12": {
+			"sourceFileName": "packages/common/src/lib/string-to-object.function.ts",
+			"qualifiedName": "stringToObject"
+		},
+		"13": {
+			"sourceFileName": "packages/common/src/lib/string-to-object.function.ts",
+			"qualifiedName": "keyValueStr"
+		},
+		"14": {
+			"sourceFileName": "packages/common/src/lib/string-to-object.function.ts",
+			"qualifiedName": "separators"
+		},
+		"15": {
+			"sourceFileName": "packages/common/src/lib/string-to-object.function.ts",
+			"qualifiedName": "StringToObjectSeparators"
+		},
+		"16": {
+			"sourceFileName": "packages/common/src/lib/string-to-object.function.ts",
+			"qualifiedName": "StringToObjectSeparators.properties"
+		},
+		"17": {
+			"sourceFileName": "packages/common/src/lib/string-to-object.function.ts",
+			"qualifiedName": "StringToObjectSeparators.values"
+		},
+		"18": {
+			"sourceFileName": "packages/common/src/lib/time-conversion.constant.ts",
+			"qualifiedName": "SECOND_AS_MILLISECOND"
+		},
+		"19": {
+			"sourceFileName": "packages/common/src/lib/time-conversion.constant.ts",
+			"qualifiedName": "MINUTE_AS_MILLISECOND"
+		},
+		"20": {
+			"sourceFileName": "packages/common/src/lib/time-conversion.constant.ts",
+			"qualifiedName": "HOUR_AS_MILLISECOND"
+		},
+		"21": {
+			"sourceFileName": "packages/common/src/lib/time-conversion.constant.ts",
+			"qualifiedName": "DAY_AS_MILLISECOND"
+		},
+		"22": {
+			"sourceFileName": "packages/common/src/lib/value-or-fn.function.ts",
+			"qualifiedName": "valueOrFn"
+		},
+		"23": {
+			"sourceFileName": "packages/common/src/lib/value-or-fn.function.ts",
+			"qualifiedName": "valueOrFn"
+		},
+		"24": {
+			"sourceFileName": "packages/common/src/lib/value-or-fn.function.ts",
+			"qualifiedName": "T"
+		},
+		"25": {
+			"sourceFileName": "packages/common/src/lib/value-or-fn.function.ts",
+			"qualifiedName": "Args"
+		},
+		"26": {
+			"sourceFileName": "packages/common/src/lib/value-or-fn.function.ts",
+			"qualifiedName": "value"
+		},
+		"27": {
+			"sourceFileName": "packages/common/src/lib/value-or-fn.function.ts",
+			"qualifiedName": "args"
+		},
+		"28": {
+			"sourceFileName": "packages/common/src/lib/value-or-fn.type.ts",
+			"qualifiedName": "ValueOrFn"
+		},
+		"29": {
+			"sourceFileName": "packages/common/src/lib/value-or-fn.type.ts",
+			"qualifiedName": "T"
+		},
+		"30": {
+			"sourceFileName": "packages/common/src/lib/value-or-fn.type.ts",
+			"qualifiedName": "Args"
+		}
+	}
+}
