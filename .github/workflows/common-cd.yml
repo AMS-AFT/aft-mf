@@ -6,12 +6,6 @@ on:
       - 'common-v*'
   workflow_dispatch:
 
-env:
-  PROJECT_NAME: common
-  GITHUB_TOKEN: ${{ secrets.GIT_BOT_TOKEN }}
-  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
 concurrency:
   group: ci-common-${{ github.ref }}-1
   cancel-in-progress: true
@@ -23,6 +17,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/sonar
+        with:
+          project-name: common
 
   deploy_package:
     needs: sonarcloud
@@ -31,6 +27,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/deploy-package
+        with:
+          project-name: common
 
   deploy_docs:
     needs: sonarcloud
@@ -39,3 +37,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/deploy-docs
+        with:
+          project-name: common

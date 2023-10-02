@@ -1,6 +1,11 @@
 name: Deploy Documentation
 description: Deploy project Documentation
 
+inputs:
+  project_name:
+    description: project name
+    required: true
+
 runs:
   using: composite
   steps:
@@ -11,11 +16,11 @@ runs:
 
     - name: Generate Documentation
       shell: bash
-      run: pnpm exec nx run ${{ env.PROJECT_NAME }}:docs --no-cloud
+      run: pnpm exec nx run ${{ input.project_name }}:docs --no-cloud
 
     - name: Deploy Documentation to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ env.GITHUB_TOKEN }}
-        publish_dir: docs/packages/${{ env.PROJECT_NAME }}
-        destination_dir: ${{ env.PROJECT_NAME }}
+        github_token: ${{ secrets.GIT_BOT_TOKEN }}
+        publish_dir: docs/packages/${{ input.project_name }}
+        destination_dir: ${{ input.project_name }}

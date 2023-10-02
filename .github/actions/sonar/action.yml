@@ -1,6 +1,11 @@
 name: Sonar
 description: Executes SonarCloud Analysis
 
+inputs:
+  project_name:
+    description: project name
+    required: true
+
 runs:
   using: composite
   steps:
@@ -13,30 +18,30 @@ runs:
       id: projectinfo
       uses: gregoranders/nodejs-project-info@v0.0.20
       with:
-        path: packages/${{ env.PROJECT_NAME }}/package.json
+        path: packages/${{ input.project_name }}/package.json
 
     - name: Generate Unit Tests Coverage
       shell: bash
-      run: pnpm exec nx run ${{ env.PROJECT_NAME }}:test --code-coverage --coverageReporters lcov --coverageDirectory packages/${{ env.PROJECT_NAME }} --skip-nx-cache
+      run: pnpm exec nx run ${{ input.project_name }}:test --code-coverage --coverageReporters lcov --coverageDirectory packages/${{ input.project_name }} --skip-nx-cache
 
     - name: Modify lcov.info
       shell: bash
-      run: sed -i 's#packages/${{ env.PROJECT_NAME }}/##g' packages/${{ env.PROJECT_NAME }}/lcov.info
+      run: sed -i 's#packages/${{ input.project_name }}/##g' packages/${{ input.project_name }}/lcov.info
 
     - name: Generate Lint Report
       shell: bash
-      run: pnpm exec nx run ${{ env.PROJECT_NAME }}:lint --format json --outputFile packages/${{ env.PROJECT_NAME }}/eslint.json --skip-nx-cache
+      run: pnpm exec nx run ${{ input.project_name }}:lint --format json --outputFile packages/${{ input.project_name }}/eslint.json --skip-nx-cache
 
     - name: Modify eslint.json
       shell: bash
-      run: sed -i 's#/home/runner/work/aft-mf/aft-mf#/github/workspace#g' packages/${{ env.PROJECT_NAME }}/eslint.json
+      run: sed -i 's#/home/runner/work/aft-mf/aft-mf#/github/workspace#g' packages/${{ input.project_name }}/eslint.json
 
     - name: Analyze in SonarCloud
       uses: SonarSource/sonarcloud-github-action@master
       with:
-        projectBaseDir: packages/${{ env.PROJECT_NAME }}
+        projectBaseDir: packages/${{ input.project_name }}
         args: >
           -Dsonar.projectVersion=${{ steps.projectinfo.outputs.version }}
       env:
-        GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ env.SONAR_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GIT_BOT_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
