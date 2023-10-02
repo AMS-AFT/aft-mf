@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node_version: [18, 20, 22]
+        node_version: [16, 18, 20]
     name: Test Affected on NodeJS ${{ matrix.node_version }}
     steps:
       - uses: actions/checkout@v3

@@ -61,7 +61,10 @@
     "docs": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["npx typedoc --options packages/common/typedoc.json", "nx run common:test:ci"],
+        "commands": [
+          "npx typedoc --options packages/common/typedoc.json --validation.notDocumented",
+          "nx run common:test:ci"
+        ],
         "parallel": false
       }
     },
