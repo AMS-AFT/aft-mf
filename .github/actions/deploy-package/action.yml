@@ -1,23 +1,18 @@
 name: Deploy Package
 description: Deploy project package
 
-inputs:
-  project_name:
-    description: project name
-    required: true
-
 runs:
   using: composite
   steps:
     - uses: actions/checkout@v3
 
-    - name: Setup ${{ inputs.project_name }}
+    - name: Setup ${{ env.PROJECT_NAME }}
       uses: ./.github/actions/setup
 
-    - name: Build ${{ inputs.project_name }}
+    - name: Build ${{ env.PROJECT_NAME }}
       shell: bash
-      run: pnpm exec nx run ${{ inputs.project_name }}:build --skip-nx-cache
+      run: pnpm exec nx run ${{ env.PROJECT_NAME }}:build --skip-nx-cache
 
-    - name: Deploy ${{ inputs.project_name }} in npm.js
+    - name: Deploy ${{ env.PROJECT_NAME }} in npm.js
       shell: bash
-      run: pnpm publish dist/packages/${{ inputs.project_name }} --access=public
+      run: pnpm publish dist/packages/${{ env.PROJECT_NAME }} --access=public

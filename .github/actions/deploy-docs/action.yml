@@ -1,26 +1,21 @@
 name: Deploy Documentation
 description: Deploy project Documentation
 
-inputs:
-  project_name:
-    description: project name
-    required: true
-
 runs:
   using: composite
   steps:
     - uses: actions/checkout@v3
 
-    - name: Setup ${{ inputs.project_name }}
+    - name: Setup ${{ env.PROJECT_NAME }}
       uses: ./.github/actions/setup
 
-    - name: Generate ${{ inputs.project_name }} documentation
+    - name: Generate ${{ env.PROJECT_NAME }} documentation
       shell: bash
-      run: pnpm exec nx run ${{ inputs.project_name }}:docs --no-cloud
+      run: pnpm exec nx run ${{ env.PROJECT_NAME }}:docs --no-cloud
 
-    - name: Deploy ${{ inputs.project_name }} documentation to GitHub Pages
+    - name: Deploy ${{ env.PROJECT_NAME }} documentation to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ env.GITHUB_TOKEN }}
-        publish_dir: docs/packages/${{ inputs.project_name }}
-        destination_dir: ${{ inputs.project_name }}
+        publish_dir: docs/packages/${{ env.PROJECT_NAME }}
+        destination_dir: ${{ env.PROJECT_NAME }}
