@@ -11,13 +11,13 @@ runs:
   steps:
     - uses: actions/checkout@v3
 
-    - name: Setup ${{ github.event.inputs.project_name }}
+    - name: Setup ${{ inputs.project_name }}
       uses: ./.github/actions/setup
 
-    - name: Build ${{ github.event.inputs.project_name }}
+    - name: Build ${{ inputs.project_name }}
       shell: bash
-      run: pnpm exec nx run ${{ github.event.inputs.project_name }}:build --skip-nx-cache
+      run: pnpm exec nx run ${{ inputs.project_name }}:build --skip-nx-cache
 
-    - name: Deploy ${{ github.event.inputs.project_name }} in npm.js
+    - name: Deploy ${{ inputs.project_name }} in npm.js
       shell: bash
-      run: pnpm publish dist/packages/${{ github.event.inputs.project_name }} --access=public
+      run: pnpm publish dist/packages/${{ inputs.project_name }} --access=public

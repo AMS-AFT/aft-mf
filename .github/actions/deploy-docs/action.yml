@@ -11,16 +11,16 @@ runs:
   steps:
     - uses: actions/checkout@v3
 
-    - name: Setup ${{ github.event.inputs.project_name }}
+    - name: Setup ${{ inputs.project_name }}
       uses: ./.github/actions/setup
 
-    - name: Generate ${{ github.event.inputs.project_name }} documentation
+    - name: Generate ${{ inputs.project_name }} documentation
       shell: bash
-      run: pnpm exec nx run ${{ github.event.inputs.project_name }}:docs --no-cloud
+      run: pnpm exec nx run ${{ inputs.project_name }}:docs --no-cloud
 
-    - name: Deploy ${{ github.event.inputs.project_name }} documentation to GitHub Pages
+    - name: Deploy ${{ inputs.project_name }} documentation to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ env.GITHUB_TOKEN }}
-        publish_dir: docs/packages/${{ github.event.inputs.project_name }}
-        destination_dir: ${{ github.event.inputs.project_name }}
+        publish_dir: docs/packages/${{ inputs.project_name }}
+        destination_dir: ${{ inputs.project_name }}

@@ -11,35 +11,35 @@ runs:
   steps:
     - uses: actions/checkout@v3
 
-    - name: Setup ${{ github.event.inputs.project_name }}
+    - name: Setup ${{ inputs.project_name }}
       uses: ./.github/actions/setup
 
-    - name: Extract ${{ github.event.inputs.project_name }} package.json info
+    - name: Extract ${{ inputs.project_name }} package.json info
       id: projectinfo
       uses: gregoranders/nodejs-project-info@v0.0.20
       with:
-        path: packages/${{ github.event.inputs.project_name }}/package.json
+        path: packages/${{ inputs.project_name }}/package.json
 
-    - name: Generate ${{ github.event.inputs.project_name }} Unit Tests Coverage
+    - name: Generate ${{ inputs.project_name }} Unit Tests Coverage
       shell: bash
-      run: pnpm exec nx run ${{ github.event.inputs.project_name }}:test --code-coverage --coverageReporters lcov --coverageDirectory packages/${{ github.event.inputs.project_name }} --skip-nx-cache
+      run: pnpm exec nx run ${{ inputs.project_name }}:test --code-coverage --coverageReporters lcov --coverageDirectory packages/${{ inputs.project_name }} --skip-nx-cache
 
-    - name: Modify ${{ github.event.inputs.project_name }} lcov.info
+    - name: Modify ${{ inputs.project_name }} lcov.info
       shell: bash
-      run: sed -i 's#packages/${{ github.event.inputs.project_name }}/##g' packages/${{ github.event.inputs.project_name }}/lcov.info
+      run: sed -i 's#packages/${{ inputs.project_name }}/##g' packages/${{ inputs.project_name }}/lcov.info
 
-    - name: Generate ${{ github.event.inputs.project_name }} Lint Report
+    - name: Generate ${{ inputs.project_name }} Lint Report
       shell: bash
-      run: pnpm exec nx run ${{ github.event.inputs.project_name }}:lint --format json --outputFile packages/${{ github.event.inputs.project_name }}/eslint.json --skip-nx-cache
+      run: pnpm exec nx run ${{ inputs.project_name }}:lint --format json --outputFile packages/${{ inputs.project_name }}/eslint.json --skip-nx-cache
 
-    - name: Modify ${{ github.event.inputs.project_name }} eslint.json
+    - name: Modify ${{ inputs.project_name }} eslint.json
       shell: bash
-      run: sed -i 's#/home/runner/work/aft-mf/aft-mf#/github/workspace#g' packages/${{ github.event.inputs.project_name }}/eslint.json
+      run: sed -i 's#/home/runner/work/aft-mf/aft-mf#/github/workspace#g' packages/${{ inputs.project_name }}/eslint.json
 
-    - name: Analyze ${{ github.event.inputs.project_name }} in SonarCloud
+    - name: Analyze ${{ inputs.project_name }} in SonarCloud
       uses: SonarSource/sonarcloud-github-action@master
       with:
-        projectBaseDir: packages/${{ github.event.inputs.project_name }}
+        projectBaseDir: packages/${{ inputs.project_name }}
         args: >
           -Dsonar.projectVersion=${{ steps.projectinfo.outputs.version }}
       # env:
