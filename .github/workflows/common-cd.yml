@@ -10,6 +10,12 @@ concurrency:
   group: ci-common-${{ github.ref }}-1
   cancel-in-progress: true
 
+env:
+  HUSKY: 0
+  GITHUB_TOKEN: ${{ secrets.GIT_BOT_TOKEN }}
+  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
 jobs:
   sonarcloud:
     runs-on: ubuntu-latest

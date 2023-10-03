@@ -11,37 +11,37 @@ runs:
   steps:
     - uses: actions/checkout@v3
 
-    - name: Setup
+    - name: Setup ${{ input.project_name }}
       uses: ./.github/actions/setup
 
-    - name: Extract package.json info
+    - name: Extract ${{ input.project_name }} package.json info
       id: projectinfo
       uses: gregoranders/nodejs-project-info@v0.0.20
       with:
         path: packages/${{ input.project_name }}/package.json
 
-    - name: Generate Unit Tests Coverage
+    - name: Generate ${{ input.project_name }} Unit Tests Coverage
       shell: bash
       run: pnpm exec nx run ${{ input.project_name }}:test --code-coverage --coverageReporters lcov --coverageDirectory packages/${{ input.project_name }} --skip-nx-cache
 
-    - name: Modify lcov.info
+    - name: Modify ${{ input.project_name }} lcov.info
       shell: bash
       run: sed -i 's#packages/${{ input.project_name }}/##g' packages/${{ input.project_name }}/lcov.info
 
-    - name: Generate Lint Report
+    - name: Generate ${{ input.project_name }} Lint Report
       shell: bash
       run: pnpm exec nx run ${{ input.project_name }}:lint --format json --outputFile packages/${{ input.project_name }}/eslint.json --skip-nx-cache
 
-    - name: Modify eslint.json
+    - name: Modify ${{ input.project_name }} eslint.json
       shell: bash
       run: sed -i 's#/home/runner/work/aft-mf/aft-mf#/github/workspace#g' packages/${{ input.project_name }}/eslint.json
 
-    - name: Analyze in SonarCloud
+    - name: Analyze ${{ input.project_name }} in SonarCloud
       uses: SonarSource/sonarcloud-github-action@master
       with:
         projectBaseDir: packages/${{ input.project_name }}
         args: >
           -Dsonar.projectVersion=${{ steps.projectinfo.outputs.version }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GIT_BOT_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      # env:
+      #   GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
+      #   SONAR_TOKEN: ${{ env.SONAR_TOKEN }}
