@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for value-or-fn.function.ts</title>
+    <title>Code coverage report for remove-nullish.function.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> value-or-fn.function.ts</h1>
+        <h1><a href="index.html">All files</a> remove-nullish.function.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -86,13 +86,9 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -107,30 +103,40 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">20x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint-disable @typescript-eslint/no-explicit-any */
-import { ValueOrFn } from './value-or-fn.type';
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { isRecord } from './is-record.function';
 &nbsp;
 /**
- * Solves for a value that can be a value or a function that returns the value.
- * @template T The value type.
- * @template Args The arguments type. Defaults to `any`.
- * @param value The value or function to solve.
- * @param args The arguments needed to resolve the function.
- * @returns The value or the result of executing the function with the args.
+ * Deep removes nullish properties from an object.
+ * @template Obj The original object type.
+ * @param obj The object from which delete nullish properties.
+ * @returns A deep clone of the object without the nullish properties.
  * @publicApi
  * @example
  * ```ts
- * valueOrFn(null); // null
- * valueOrFn(undefined); // undefined
- * valueOrFn(1); // 1
- * valueOrFn(() =&gt; 1); // 1
- * valueOrFn((a, b) =&gt; a + b, 1, 1); // 2
+ * removeNullish({ a: null, b: undefined, c: 0 }); // {c:0}
+ * removeNullish({ a: { a: null, b: 0 } }); // {a:{b:0}}
  * ```
  */
-export function valueOrFn&lt;T, Args = any&gt;(value: ValueOrFn&lt;T, Args&gt;, ...args: Args[]): T {
-  return value instanceof Function ? value(...args) : value;
+export function removeNullish&lt;Obj extends Record&lt;string, unknown&gt;&gt;(obj: Obj): Obj {
+  return Object.keys(obj).reduce((newObj: Partial&lt;Obj&gt;, key: keyof Obj) =&gt; {
+    const value: Obj[keyof Obj] = obj[key];
+&nbsp;
+    if (value != null) {
+      newObj[key] = isRecord(value) ? removeNullish(value) : value;
+    }
+&nbsp;
+    return newObj;
+  }, {}) as Obj;
 }
 &nbsp;</pre></td></tr></table></pre>
 

@@ -6,7 +6,7 @@
 	"flags": {},
 	"children": [
 		{
-			"id": 15,
+			"id": 23,
 			"name": "StringToObjectSeparators",
 			"variant": "declaration",
 			"kind": 256,
@@ -26,7 +26,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "stringToObject",
-								"target": 11,
+								"target": 19,
 								"tsLinkText": ""
 							}
 						]
@@ -39,7 +39,7 @@
 			},
 			"children": [
 				{
-					"id": 16,
+					"id": 24,
 					"name": "properties",
 					"variant": "declaration",
 					"kind": 1024,
@@ -65,7 +65,7 @@
 							"fileName": "string-to-object.function.ts",
 							"line": 12,
 							"character": 2,
-							"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/string-to-object.function.ts#L12"
+							"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/string-to-object.function.ts#L12"
 						}
 					],
 					"type": {
@@ -74,7 +74,7 @@
 					}
 				},
 				{
-					"id": 17,
+					"id": 25,
 					"name": "values",
 					"variant": "declaration",
 					"kind": 1024,
@@ -100,7 +100,7 @@
 							"fileName": "string-to-object.function.ts",
 							"line": 19,
 							"character": 2,
-							"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/string-to-object.function.ts#L19"
+							"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/string-to-object.function.ts#L19"
 						}
 					],
 					"type": {
@@ -113,8 +113,8 @@
 				{
 					"title": "Properties",
 					"children": [
-						16,
-						17
+						24,
+						25
 					]
 				}
 			],
@@ -123,7 +123,7 @@
 					"fileName": "string-to-object.function.ts",
 					"line": 6,
 					"character": 17,
-					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/string-to-object.function.ts#L6"
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/string-to-object.function.ts#L6"
 				}
 			]
 		},
@@ -138,7 +138,7 @@
 					"fileName": "any-function.type.ts",
 					"line": 11,
 					"character": 12,
-					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/any-function.type.ts#L11"
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/any-function.type.ts#L11"
 				}
 			],
 			"typeParameters": [
@@ -198,7 +198,7 @@
 							"fileName": "any-function.type.ts",
 							"line": 11,
 							"character": 41,
-							"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/any-function.type.ts#L11"
+							"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/any-function.type.ts#L11"
 						}
 					],
 					"signatures": [
@@ -271,7 +271,7 @@
 			}
 		},
 		{
-			"id": 28,
+			"id": 37,
 			"name": "ValueOrFn",
 			"variant": "declaration",
 			"kind": 4194304,
@@ -295,12 +295,12 @@
 					"fileName": "value-or-fn.type.ts",
 					"line": 10,
 					"character": 12,
-					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/value-or-fn.type.ts#L10"
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/value-or-fn.type.ts#L10"
 				}
 			],
 			"typeParameters": [
 				{
-					"id": 29,
+					"id": 38,
 					"name": "T",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -315,7 +315,7 @@
 					}
 				},
 				{
-					"id": 30,
+					"id": 39,
 					"name": "Args",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -375,7 +375,7 @@
 			}
 		},
 		{
-			"id": 21,
+			"id": 29,
 			"name": "DAY_AS_MILLISECOND",
 			"variant": "declaration",
 			"kind": 32,
@@ -401,7 +401,7 @@
 					"fileName": "time-conversion.constant.ts",
 					"line": 23,
 					"character": 13,
-					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/time-conversion.constant.ts#L23"
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/time-conversion.constant.ts#L23"
 				}
 			],
 			"type": {
@@ -411,7 +411,7 @@
 			"defaultValue": "..."
 		},
 		{
-			"id": 20,
+			"id": 28,
 			"name": "HOUR_AS_MILLISECOND",
 			"variant": "declaration",
 			"kind": 32,
@@ -437,7 +437,7 @@
 					"fileName": "time-conversion.constant.ts",
 					"line": 17,
 					"character": 13,
-					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/time-conversion.constant.ts#L17"
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/time-conversion.constant.ts#L17"
 				}
 			],
 			"type": {
@@ -447,7 +447,7 @@
 			"defaultValue": "..."
 		},
 		{
-			"id": 19,
+			"id": 27,
 			"name": "MINUTE_AS_MILLISECOND",
 			"variant": "declaration",
 			"kind": 32,
@@ -473,7 +473,7 @@
 					"fileName": "time-conversion.constant.ts",
 					"line": 11,
 					"character": 13,
-					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/time-conversion.constant.ts#L11"
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/time-conversion.constant.ts#L11"
 				}
 			],
 			"type": {
@@ -483,7 +483,7 @@
 			"defaultValue": "..."
 		},
 		{
-			"id": 18,
+			"id": 26,
 			"name": "SECOND_AS_MILLISECOND",
 			"variant": "declaration",
 			"kind": 32,
@@ -509,7 +509,7 @@
 					"fileName": "time-conversion.constant.ts",
 					"line": 5,
 					"character": 13,
-					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/time-conversion.constant.ts#L5"
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/time-conversion.constant.ts#L5"
 				}
 			],
 			"type": {
@@ -519,7 +519,181 @@
 			"defaultValue": "1_000"
 		},
 		{
+			"id": 30,
+			"name": "WEEK_AS_MILLISECOND",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Number of milliseconds in a week: 604_800_000."
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@publicApi",
+						"content": []
+					}
+				]
+			},
+			"sources": [
+				{
+					"fileName": "time-conversion.constant.ts",
+					"line": 29,
+					"character": 13,
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/time-conversion.constant.ts#L29"
+				}
+			],
+			"type": {
+				"type": "intrinsic",
+				"name": "number"
+			},
+			"defaultValue": "..."
+		},
+		{
 			"id": 7,
+			"name": "isRecord",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "is-record.function.ts",
+					"line": 14,
+					"character": 16,
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/is-record.function.ts#L14"
+				}
+			],
+			"signatures": [
+				{
+					"id": 8,
+					"name": "isRecord",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Type guard to check that value is a Record."
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@returns",
+								"content": [
+									{
+										"kind": "text",
+										"text": "True if is a Record. False otherwise."
+									}
+								]
+							},
+							{
+								"tag": "@publicApi",
+								"content": []
+							},
+							{
+								"tag": "@example",
+								"content": [
+									{
+										"kind": "code",
+										"text": "```ts\nisRecord({a:0}); // true\nisRecord({}); // false\nisRecord(0); // false\n```"
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "is-record.function.ts",
+							"line": 14,
+							"character": 0,
+							"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/is-record.function.ts#L14"
+						}
+					],
+					"typeParameter": [
+						{
+							"id": 9,
+							"name": "T",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The record values type."
+									}
+								]
+							},
+							"default": {
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						}
+					],
+					"parameters": [
+						{
+							"id": 10,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The value to check."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "reference",
+							"target": {
+								"sourceFileName": "node_modules/.pnpm/typescript@5.1.6/node_modules/typescript/lib/lib.es5.d.ts",
+								"qualifiedName": "Record"
+							},
+							"typeArguments": [
+								{
+									"type": "reference",
+									"target": {
+										"sourceFileName": "node_modules/.pnpm/typescript@5.1.6/node_modules/typescript/lib/lib.es5.d.ts",
+										"qualifiedName": "PropertyKey"
+									},
+									"name": "PropertyKey",
+									"package": "typescript"
+								},
+								{
+									"type": "reference",
+									"target": -1,
+									"name": "T",
+									"refersToTypeParameter": true
+								}
+							],
+							"name": "Record",
+							"package": "typescript",
+							"externalUrl": "https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type"
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 11,
 			"name": "randomBetween",
 			"variant": "declaration",
 			"kind": 64,
@@ -529,12 +703,12 @@
 					"fileName": "random-between.function.ts",
 					"line": 27,
 					"character": 16,
-					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/random-between.function.ts#L27"
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/random-between.function.ts#L27"
 				}
 			],
 			"signatures": [
 				{
-					"id": 8,
+					"id": 12,
 					"name": "randomBetween",
 					"variant": "signature",
 					"kind": 4096,
@@ -690,12 +864,12 @@
 							"fileName": "random-between.function.ts",
 							"line": 27,
 							"character": 0,
-							"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/random-between.function.ts#L27"
+							"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/random-between.function.ts#L27"
 						}
 					],
 					"parameters": [
 						{
-							"id": 9,
+							"id": 13,
 							"name": "min",
 							"variant": "param",
 							"kind": 32768,
@@ -714,7 +888,7 @@
 							}
 						},
 						{
-							"id": 10,
+							"id": 14,
 							"name": "max",
 							"variant": "param",
 							"kind": 32768,
@@ -741,7 +915,137 @@
 			]
 		},
 		{
-			"id": 11,
+			"id": 15,
+			"name": "removeNullish",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "remove-nullish.function.ts",
+					"line": 15,
+					"character": 16,
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/remove-nullish.function.ts#L15"
+				}
+			],
+			"signatures": [
+				{
+					"id": 16,
+					"name": "removeNullish",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Deep removes nullish properties from an object."
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@returns",
+								"content": [
+									{
+										"kind": "text",
+										"text": "A deep clone of the object without the nullish properties."
+									}
+								]
+							},
+							{
+								"tag": "@publicApi",
+								"content": []
+							},
+							{
+								"tag": "@example",
+								"content": [
+									{
+										"kind": "code",
+										"text": "```ts\nremoveNullish({ a: null, b: undefined, c: 0 }); // {c:0}\nremoveNullish({ a: { a: null, b: 0 } }); // {a:{b:0}}\n```"
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "remove-nullish.function.ts",
+							"line": 15,
+							"character": 0,
+							"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/remove-nullish.function.ts#L15"
+						}
+					],
+					"typeParameter": [
+						{
+							"id": 17,
+							"name": "Obj",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The original object type."
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/.pnpm/typescript@5.1.6/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Record"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								],
+								"name": "Record",
+								"package": "typescript",
+								"externalUrl": "https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type"
+							}
+						}
+					],
+					"parameters": [
+						{
+							"id": 18,
+							"name": "obj",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The object from which delete nullish properties."
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"target": -1,
+								"name": "Obj",
+								"refersToTypeParameter": true
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": -1,
+						"name": "Obj",
+						"refersToTypeParameter": true
+					}
+				}
+			]
+		},
+		{
+			"id": 19,
 			"name": "stringToObject",
 			"variant": "declaration",
 			"kind": 64,
@@ -751,12 +1055,12 @@
 					"fileName": "string-to-object.function.ts",
 					"line": 41,
 					"character": 16,
-					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/string-to-object.function.ts#L41"
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/string-to-object.function.ts#L41"
 				}
 			],
 			"signatures": [
 				{
-					"id": 12,
+					"id": 20,
 					"name": "stringToObject",
 					"variant": "signature",
 					"kind": 4096,
@@ -798,12 +1102,12 @@
 							"fileName": "string-to-object.function.ts",
 							"line": 41,
 							"character": 0,
-							"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/string-to-object.function.ts#L41"
+							"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/string-to-object.function.ts#L41"
 						}
 					],
 					"parameters": [
 						{
-							"id": 13,
+							"id": 21,
 							"name": "keyValueStr",
 							"variant": "param",
 							"kind": 32768,
@@ -822,7 +1126,7 @@
 							}
 						},
 						{
-							"id": 14,
+							"id": 22,
 							"name": "separators",
 							"variant": "param",
 							"kind": 32768,
@@ -845,7 +1149,7 @@
 							},
 							"type": {
 								"type": "reference",
-								"target": 15,
+								"target": 23,
 								"name": "StringToObjectSeparators",
 								"package": "@aft-mf/common"
 							},
@@ -876,7 +1180,7 @@
 			]
 		},
 		{
-			"id": 22,
+			"id": 31,
 			"name": "valueOrFn",
 			"variant": "declaration",
 			"kind": 64,
@@ -886,12 +1190,12 @@
 					"fileName": "value-or-fn.function.ts",
 					"line": 21,
 					"character": 16,
-					"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/value-or-fn.function.ts#L21"
+					"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/value-or-fn.function.ts#L21"
 				}
 			],
 			"signatures": [
 				{
-					"id": 23,
+					"id": 32,
 					"name": "valueOrFn",
 					"variant": "signature",
 					"kind": 4096,
@@ -933,12 +1237,12 @@
 							"fileName": "value-or-fn.function.ts",
 							"line": 21,
 							"character": 0,
-							"url": "https://github.com/AMS-AFT/aft-mf/blob/3805d01/packages/common/src/lib/value-or-fn.function.ts#L21"
+							"url": "https://github.com/AMS-AFT/aft-mf/blob/9d66346/packages/common/src/lib/value-or-fn.function.ts#L21"
 						}
 					],
 					"typeParameter": [
 						{
-							"id": 24,
+							"id": 33,
 							"name": "T",
 							"variant": "typeParam",
 							"kind": 131072,
@@ -953,7 +1257,7 @@
 							}
 						},
 						{
-							"id": 25,
+							"id": 34,
 							"name": "Args",
 							"variant": "typeParam",
 							"kind": 131072,
@@ -982,7 +1286,7 @@
 					],
 					"parameters": [
 						{
-							"id": 26,
+							"id": 35,
 							"name": "value",
 							"variant": "param",
 							"kind": 32768,
@@ -997,7 +1301,7 @@
 							},
 							"type": {
 								"type": "reference",
-								"target": 28,
+								"target": 37,
 								"typeArguments": [
 									{
 										"type": "reference",
@@ -1017,7 +1321,7 @@
 							}
 						},
 						{
-							"id": 27,
+							"id": 36,
 							"name": "args",
 							"variant": "param",
 							"kind": 32768,
@@ -1057,23 +1361,24 @@
 		{
 			"title": "Interfaces",
 			"children": [
-				15
+				23
 			]
 		},
 		{
 			"title": "Type Aliases",
 			"children": [
 				1,
-				28
+				37
 			]
 		},
 		{
 			"title": "Variables",
 			"children": [
-				21,
-				20,
-				19,
-				18
+				29,
+				28,
+				27,
+				26,
+				30
 			]
 		},
 		{
@@ -1081,7 +1386,9 @@
 			"children": [
 				7,
 				11,
-				22
+				15,
+				19,
+				31
 			]
 		}
 	],
@@ -1090,7 +1397,7 @@
 	"readme": [
 		{
 			"kind": "text",
-			"text": "# AFT Meta Framework Common\n\nImplements fundamental AFT Meta Framework functionality."
+			"text": "<h1 align=\"center\">AFT Meta Framework - Common</h1>\n\n<p align=\"center\">\n  <em>Implements fundamental AFT Meta Framework functionality.</em>\n</p>\n\nThis library contains constants, types, and functions that are not tied to any particular framework or library, fundamental for other libraries within this metaframework.\n\n<hr />\n\n[![npm](https://img.shields.io/npm/v/@aft-mf/common?logo=npm&style=flat-square)](https://www.npmjs.com/package/@kuoki/anymap)\n[![Documentation](https://img.shields.io/badge/documentation-done-blue?style=flat-square)](https://ricardojbarrios.github.io/kuoki/anymap/)\n[![Coverage](https://img.shields.io/sonar/coverage/aft-mf:common/master?server=https%3A%2F%2Fsonarcloud.io&style=flat-square)](https://sonarcloud.io/component_measures?id=aft-mf%3Acommon&metric=coverage&view=list)\n[![Quality Gate Status](https://img.shields.io/sonar/quality_gate/aft-mf:common?logo=sonarcloud&server=https%3A%2F%2Fsonarcloud.io&style=flat-square)](https://sonarcloud.io/summary/new_code?id=aft-mf%3Acommon)\n[![GitHub](https://img.shields.io/github/license/AMS-AFT/aft-mf?style=flat-square)](https://github.com/AMS-AFT/aft-mf/blob/main/LICENSE.md)\n[![GitHub issues anymap](https://img.shields.io/github/issues/AMS-AFT/aft-mf/lib-common?logo=github&label=issues&style=flat-square)](https://github.com/AMS-AFT/aft-mf/labels/lib-common)"
 		}
 	],
 	"symbolIdMap": {
@@ -1123,98 +1430,134 @@
 			"qualifiedName": "Args"
 		},
 		"7": {
-			"sourceFileName": "packages/common/src/lib/random-between.function.ts",
-			"qualifiedName": "randomBetween"
+			"sourceFileName": "packages/common/src/lib/is-record.function.ts",
+			"qualifiedName": "isRecord"
 		},
 		"8": {
+			"sourceFileName": "packages/common/src/lib/is-record.function.ts",
+			"qualifiedName": "isRecord"
+		},
+		"9": {
+			"sourceFileName": "packages/common/src/lib/is-record.function.ts",
+			"qualifiedName": "T"
+		},
+		"10": {
+			"sourceFileName": "packages/common/src/lib/is-record.function.ts",
+			"qualifiedName": "value"
+		},
+		"11": {
 			"sourceFileName": "packages/common/src/lib/random-between.function.ts",
 			"qualifiedName": "randomBetween"
 		},
-		"9": {
+		"12": {
+			"sourceFileName": "packages/common/src/lib/random-between.function.ts",
+			"qualifiedName": "randomBetween"
+		},
+		"13": {
 			"sourceFileName": "packages/common/src/lib/random-between.function.ts",
 			"qualifiedName": "min"
 		},
-		"10": {
+		"14": {
 			"sourceFileName": "packages/common/src/lib/random-between.function.ts",
 			"qualifiedName": "max"
 		},
-		"11": {
+		"15": {
+			"sourceFileName": "packages/common/src/lib/remove-nullish.function.ts",
+			"qualifiedName": "removeNullish"
+		},
+		"16": {
+			"sourceFileName": "packages/common/src/lib/remove-nullish.function.ts",
+			"qualifiedName": "removeNullish"
+		},
+		"17": {
+			"sourceFileName": "packages/common/src/lib/remove-nullish.function.ts",
+			"qualifiedName": "Obj"
+		},
+		"18": {
+			"sourceFileName": "packages/common/src/lib/remove-nullish.function.ts",
+			"qualifiedName": "obj"
+		},
+		"19": {
 			"sourceFileName": "packages/common/src/lib/string-to-object.function.ts",
 			"qualifiedName": "stringToObject"
 		},
-		"12": {
+		"20": {
 			"sourceFileName": "packages/common/src/lib/string-to-object.function.ts",
 			"qualifiedName": "stringToObject"
 		},
-		"13": {
+		"21": {
 			"sourceFileName": "packages/common/src/lib/string-to-object.function.ts",
 			"qualifiedName": "keyValueStr"
 		},
-		"14": {
+		"22": {
 			"sourceFileName": "packages/common/src/lib/string-to-object.function.ts",
 			"qualifiedName": "separators"
 		},
-		"15": {
+		"23": {
 			"sourceFileName": "packages/common/src/lib/string-to-object.function.ts",
 			"qualifiedName": "StringToObjectSeparators"
 		},
-		"16": {
+		"24": {
 			"sourceFileName": "packages/common/src/lib/string-to-object.function.ts",
 			"qualifiedName": "StringToObjectSeparators.properties"
 		},
-		"17": {
+		"25": {
 			"sourceFileName": "packages/common/src/lib/string-to-object.function.ts",
 			"qualifiedName": "StringToObjectSeparators.values"
 		},
-		"18": {
+		"26": {
 			"sourceFileName": "packages/common/src/lib/time-conversion.constant.ts",
 			"qualifiedName": "SECOND_AS_MILLISECOND"
 		},
-		"19": {
+		"27": {
 			"sourceFileName": "packages/common/src/lib/time-conversion.constant.ts",
 			"qualifiedName": "MINUTE_AS_MILLISECOND"
 		},
-		"20": {
+		"28": {
 			"sourceFileName": "packages/common/src/lib/time-conversion.constant.ts",
 			"qualifiedName": "HOUR_AS_MILLISECOND"
 		},
-		"21": {
+		"29": {
 			"sourceFileName": "packages/common/src/lib/time-conversion.constant.ts",
 			"qualifiedName": "DAY_AS_MILLISECOND"
 		},
-		"22": {
+		"30": {
+			"sourceFileName": "packages/common/src/lib/time-conversion.constant.ts",
+			"qualifiedName": "WEEK_AS_MILLISECOND"
+		},
+		"31": {
 			"sourceFileName": "packages/common/src/lib/value-or-fn.function.ts",
 			"qualifiedName": "valueOrFn"
 		},
-		"23": {
+		"32": {
 			"sourceFileName": "packages/common/src/lib/value-or-fn.function.ts",
 			"qualifiedName": "valueOrFn"
 		},
-		"24": {
+		"33": {
 			"sourceFileName": "packages/common/src/lib/value-or-fn.function.ts",
 			"qualifiedName": "T"
 		},
-		"25": {
+		"34": {
 			"sourceFileName": "packages/common/src/lib/value-or-fn.function.ts",
 			"qualifiedName": "Args"
 		},
-		"26": {
+		"35": {
 			"sourceFileName": "packages/common/src/lib/value-or-fn.function.ts",
 			"qualifiedName": "value"
 		},
-		"27": {
+		"36": {
 			"sourceFileName": "packages/common/src/lib/value-or-fn.function.ts",
 			"qualifiedName": "args"
 		},
-		"28": {
+		"37": {
 			"sourceFileName": "packages/common/src/lib/value-or-fn.type.ts",
 			"qualifiedName": "ValueOrFn"
 		},
-		"29": {
+		"38": {
 			"sourceFileName": "packages/common/src/lib/value-or-fn.type.ts",
 			"qualifiedName": "T"
 		},
-		"30": {
+		"39": {
 			"sourceFileName": "packages/common/src/lib/value-or-fn.type.ts",
 			"qualifiedName": "Args"
 		}
